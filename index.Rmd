@@ -1,11 +1,18 @@
 ---
 title: "Ashley Kang"
 output: 
-  html_document:
-    toc: true
-    toc_float: true
+  html_document
 ---
+<br>
 
-MPH in Epidemiology, Columbia University Mailman School of Public Health
+### About Me
+Hi, my name is Ashley and I work in the Health Economics and Outcomes Research (HEOR) sphere. I use health data to quantify and communicate the value of novel and emerging therapeutics. I received my Master of Public Health in Epidemiology at Columbia University in 2019 and my Bachelor of Arts in Public Health and Molecular and Cell Biology at University of California, Berkeley in 2016. 
 
-### About me
+<br>
+<br>
+
+### Contact Information
+Ashley Kang
+<br>
+Email: <ashley.i.kang@gmail.com>
+

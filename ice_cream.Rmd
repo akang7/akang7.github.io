@@ -1,5 +1,5 @@
 ---
-title: "Ice Cream"
+title: "#icecreamfordayz"
 output:
   html_document:
     toc: true
@@ -7,7 +7,6 @@ output:
 ---
 
 <br>
-
 On a less serious note, I really enjoy ice cream and when I was in college, I wrote a [blog post](http://ashleykanggg.tumblr.com/post/94611347893/ice-creameries-in-the-bay) dedicated to all the "*artisanal*" ice cream I had in the Bay Area. This jumpstarted the idea to write about all the ice cream I've tried thus far. Due to age, but mostly fear of developing diabetes and gaining weight, I don't consume ice cream at the rate in which I used to (during my glory days - aka college), but I still enjoy a good ice cream from time to time.
 
 *Just a friendly reminder that this is all personal opinion/preference*
@@ -18,7 +17,7 @@ On a less serious note, I really enjoy ice cream and when I was in college, I wr
 
 <br>
 
-### San Francisco, CA
+### Bay Area, CA
 
 #### [Mr. and Mrs. Miscellaneous](https://www.yelp.com/biz/mr-and-mrs-miscellaneous-san-francisco)
 
