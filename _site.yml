@@ -5,9 +5,14 @@ navbar:
   left:
     - text: "About"
       href: about.html
+    - text: "Projects"
+      href: projects.html
+    - text: "Interests"
+      href: interests.html
+      menu:
+        - text: "Ice Cream"
+          href: ice_cream.html
   right:
-    - icon: "fa-light fa-ice-cream
-      href: ice_cream.html
     - icon: fa-envelope fa-lg
       href: mailto:<ashleykang0709@gmail.com>
     - icon: fa-linkedin fa-lg
