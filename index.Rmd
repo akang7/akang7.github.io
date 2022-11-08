@@ -1,0 +1,12 @@
+---
+title: "Ashley Kang"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+MPH in Epidemiology, Columbia University Mailman School of Public Health
+
+### About me
