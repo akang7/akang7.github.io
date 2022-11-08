@@ -6,7 +6,7 @@ navbar:
     - text: "About"
       href: about.html
   right:
-    - icon: <i class="fa-light fa-ice-cream"></i>
+    - icon: "fa-light fa-ice-cream
       href: ice_cream.html
     - icon: fa-envelope fa-lg
       href: mailto:<ashleykang0709@gmail.com>
