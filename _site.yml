@@ -6,6 +6,8 @@ navbar:
     - text: "About"
       href: about.html
   right:
+    - icon: fa-ice-cream fa-lg
+      href: ice_ream.html
     - icon: fa-envelope fa-lg
       href: mailto:<ashleykang0709@gmail.com>
     - icon: fa-github fa-lg

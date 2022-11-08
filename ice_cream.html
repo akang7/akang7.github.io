@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Ice Cream</title>
+
+<script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Home</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="about.html">About</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="mailto:&lt;ashleykang0709@gmail.com&gt;">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="http://github.com/akang7/">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Ice Cream</h1>
+
+</div>
+
+
+<p><br></p>
+<p>On a less serious note, I really enjoy ice cream and when I was in
+college, I wrote a <a
+href="http://ashleykanggg.tumblr.com/post/94611347893/ice-creameries-in-the-bay">blog
+post</a> dedicated to all the “<em>artisanal</em>” ice cream I had in
+the Bay Area. This jumpstarted the idea to write about all the ice cream
+I’ve tried thus far. Due to age, but mostly fear of developing diabetes
+and gaining weight, I don’t consume ice cream at the rate in which I
+used to (during my glory days - aka college), but I still enjoy a good
+ice cream from time to time.</p>
+<p><em>Just a friendly reminder that this is all personal
+opinion/preference</em></p>
+<p><br></p>
+<p><img src="images/IMG_4804.JPG" style="width:75%"></p>
+<p><br></p>
+<div id="san-francisco-ca" class="section level3">
+<h3>San Francisco, CA</h3>
+<div id="mr.-and-mrs.-miscellaneous" class="section level4">
+<h4><a
+href="https://www.yelp.com/biz/mr-and-mrs-miscellaneous-san-francisco">Mr. and
+Mrs. Miscellaneous</a></h4>
+<p><img src="images/IMG_5140.JPG" style="width:50%"></p>
+<p>One of my favorite ice creameries of all time. Putting this at the
+top of my list for favorite ice cream places in the Bay Area may be
+controversial since there are many people who adamantly believe that
+Bi-Rite is the <em>best</em> creamery in San Francisco, but I think what
+seals the deal for me is the creaminess of the ice cream at Mr. and
+Mrs. Miscellaneous. I love the fact that every bite is so indulgent.
+Brownie points for packing the ice cream all the way down the cone.</p>
+<p>Price: $3.50 for a single scoop (1 flavor)</p>
+<p>Side Note: Mr. And Mrs. Miscellaneous only lets you try two flavors.
+There isn’t much seating and unfortunately there is a $5 minimum in
+order to use a credit card.</p>
+<p><br></p>
+</div>
+<div id="bi-rite-creamery" class="section level4">
+<h4><a
+href="https://www.yelp.com/biz/bi-rite-creamery-san-francisco">Bi-Rite
+Creamery</a></h4>
+<p><img src="images/IMG_5794.JPG" style="width:50%"></p>
+<p>I really enjoy teas and flower scents - aptly, one of my favorite
+flavors at Bi-Rite is Honey Lavender. Tea and flower scents are very
+divisive. Some of my friends dislike Honey Lavender as they say it
+tastes like soap, but to me, it is beautifully crafted - strong enough
+that it lingers on my tongue but light enough that it doesn’t overwhelm
+my taste buds. I’ve also had the Salted Caramel and Ricanelas and I
+thoroughly enjoyed every bite. The flavors served at Bi-Rite are very
+rich (but not too creamy in comparison to Mr. and
+Mrs. Miscellaneous).</p>
+<p>Price: $4.75 for a small (1-2 flavors)</p>
+<p>Suggestion: If the weather is nice, you should grab a sandwich at
+Ike’s, eat it at Dolores Park, and then visit Bi-Rite.</p>
+<p><br></p>
+</div>
+<div id="humphry-slocombe-ice-cream" class="section level4">
+<h4><a
+href="https://www.yelp.com/biz/humphry-slocombe-ice-cream-san-francisco-4?osq=humphreys">Humphry
+Slocombe Ice Cream</a></h4>
+<p><img src="images/humphry.jpg" style="width:50%"></p>
+<p>It took me a while to try Humphry’s - I had it junior year in college
+while hanging out with my high school best friend in the Ferry Building.
+I tried Candied Ginger, and I really enjoyed it! When I dug into my ice
+cream, I was pleasantly surprised to find chunks of actual ginger (since
+I had assumed the ginger would only be the flavoring). In terms of
+richness and creaminess, I would say it’s in the middle of both Bi-Rite
+and Mr. and Mrs. Miscellaneous.</p>
+<p>Price: $4.75 for a single</p>
+<p>Con: They didn’t serve cones (at least when I visited).</p>
+<p><br></p>
+</div>
+</div>
+<div id="berkeley-ca" class="section level3">
+<h3>Berkeley, CA</h3>
+<div id="ici-ice-cream" class="section level4">
+<h4><a href="https://www.yelp.com/biz/ici-ice-cream-berkeley">Ici Ice
+Cream</a></h4>
+<p><img src="images/IMG_5355.JPG" style="width:50%"></p>
+<p><strong>NOW CLOSED</strong> This is a Berkeley staple. I’ve been here
+too many times, ranging from when they first open in the morning to
+barely making the cut-off right before they close. Their homemade cone
+is a must-try! My favorite flavor at Ici is Rose Vanilla. One thing’s
+for sure - Ici does <strong>not</strong> shy away from eclectic flavors:
+banana curry, pink peppercorn, Anise Almond Grappa Raisin, etc. This is
+a little icier and less creamy/rich than the other ice cream shops
+listed above.</p>
+<p>Price: $3.50 (cup) or $4.75 (cone) for one scoop</p>
+<p>Pros: So close to my apartment (8 minute walking distance, 4 minutes
+if I run). They also have unique flavors (as mentioned above) which
+change <em>somewhat</em> daily, and you can try up to 4 of them! Also if
+you’re in between flavors but you only want one scoop, you can get
+“half-scoops” (but only in a cup - you can still ask for a cone and
+they’ll place the cone on top of your ice cream in a cup)! Brilliant,
+right?</p>
+<p>Cons: Long lines, primarily because there are so many Berkeley
+students drowning their sorrows or celebrating their accomplishments at
+Ici - including me.</p>
+<p>Side Note: The workers here have fantastic memories! I don’t
+understand how they remember all of the flavors.</p>
+<p><br></p>
+</div>
+<div id="smitten-ice-cream" class="section level4">
+<h4><a
+href="https://www.yelp.com/biz/smitten-ice-cream-oakland-3">Smitten Ice
+Cream</a></h4>
+<p><img src="images/IMG_5215.JPG" style="width:50%"></p>
+<p>Okay, so I’m not a huge fan. I think the idea behind how they make
+their ice cream is absolutely cool - they use liquid nitrogen if you
+didn’t know (yay science). However, I don’t really like the texture of
+the ice cream. It feels like cold, too-smooth-almost-in-a-fake-way
+buttercream frosting.</p>
+<p>Price: $5 for a small scoop</p>
+<p><br></p>
+</div>
+<div id="fentons-creamery" class="section level4">
+<h4><a
+href="https://www.yelp.com/biz/fentons-creamery-oakland-2">Fentons
+Creamery</a></h4>
+<p><img src="images/IMG_6149.JPG" style="width:50%"></p>
+<p>Did you know that Fentons Creamery is featured in <em>Up</em>? It’s a
+cute ice creamery and diner (you can order food there). I’ve only tried
+their ice cream sundaes, which are as decadent and delicious as they
+look. You can also try the <strong>Fenton’s Challenge</strong>, in which
+you are given 15 minutes to finish a massive sundae, comprised of 1 lb
+of vanilla ice cream, 1 lb of strawberry ice cream, 1 lb of chocolate
+ice cream, and doused with every topping and syrup/sauce that comes with
+a normal sundae. I can proudly say that I finished the challenge
+slightly under 5 minutes. Would I ever do it again? I’d say <strong>hell
+no</strong>.</p>
+<p>Price: $6.50 for a single scoop.</p>
+<p><br></p>
+</div>
+<div id="cream" class="section level4">
+<h4><a href="https://www.yelp.com/biz/cream-berkeley-5">CREAM</a></h4>
+<p>CREAM stands for “Cookies Rule Everything Around Me.” Berkeley
+equivalent of Diddy Riese in Los Angeles (see below). Famous for their
+ice cream cookie sandwiches. The ice cream itself isn’t too special, but
+add the cookies (which are served warm) and you’re in for a sweet
+treat.</p>
+<p>Price: $3.99 for an ice cream sandwich, $2.49 for a single scoop</p>
+<p>Cons: Ice cream can melt quickly since it is sandwiched between two
+warm cookies. Also, the lines get crazy especialy during nighttime on
+the weekends.</p>
+<p><br></p>
+</div>
+<div id="almare-gelato-italiano" class="section level4">
+<h4><a
+href="https://www.yelp.com/biz/almare-gelato-italiano-berkeley">Almare
+Gelato Italiano</a></h4>
+<p>Small shop near the Berkeley BART entrance serving decent gelato. My
+go-to flavor here is Stracciatella - have yet to be disappointed. They
+also give you a good serving size. They also have a stamp card so take
+one and bring it with you if you will be frequenting this place.</p>
+<p>Price: $3.25 for a single scoop (kids cup)</p>
+<p>Pros: They let you try as many flavors as you want and will let you
+do half scoops.</p>
+<p>Cons: Inconsistent service, limited seating.</p>
+<p><br></p>
+</div>
+<div id="johns-ice-cream" class="section level4">
+<h4><a href="https://www.yelp.com/biz/johns-ice-cream-berkeley">John’s
+Ice Cream</a></h4>
+<p>Back in the day, John’s Ice cream used to be $1 flat. Then, I heard
+that they raised their price by $0.10 on one random day either my junior
+or senior year of college (my memory is a little hazy). I’m not joking
+when I say that adding $0.10 to the price greatly upset, dare I say
+outraged, people. You pay for what you get - the quality is decent, but
+nowhere near astonishing. It does the job.</p>
+<p>Price: $1.75 for a single scoop</p>
+<p>Cons: Cash only</p>
+<p><br></p>
+</div>
+<div id="taras-organic-ice-cream" class="section level4">
+<h4><a
+href="https://www.yelp.com/biz/taras-organic-ice-cream-berkeley">Tara’s
+Organic Ice Cream</a></h4>
+</div>
+<div id="three-twins-ice-cream" class="section level4">
+<h4><a
+href="https://www.yelp.com/biz/three-twins-ice-cream-berkeley">Three
+Twins Ice Cream</a></h4>
+</div>
+<div id="secret-scoop-thai-gelato" class="section level4">
+<h4><a
+href="https://www.yelp.com/biz/secret-scoop-thai-gelato-and-dessert-cafe-berkeley">Secret
+Scoop Thai Gelato</a></h4>
+</div>
+<div id="lush-gelato" class="section level4">
+<h4><a href="https://www.yelp.com/biz/lush-gelato-berkeley">Lush
+Gelato</a></h4>
+<p>This shop is hidden, tucked away at the back of Epicurious
+Garden.</p>
+<p><br></p>
+<p><br></p>
+</div>
+</div>
+<div id="los-angeles-ca" class="section level3">
+<h3>Los Angeles, CA</h3>
+<div id="salt-straw-ice-cream" class="section level4">
+<h4><a href="https://www.yelp.com/biz/salt-and-straw-los-angeles">Salt
+&amp; Straw Ice Cream</a></h4>
+<p>Okay, this is cheating a little since Salt &amp; Straw originated in
+Portland, but since I’ve never been to Portland (and therefore haven’t
+had the <em>original</em> Salt &amp; Straw), I will say this is one of
+my favorite ice cream shops in sunny Los Angeles. It’s positioned in
+Larchmont Village next to some of my favorite shops such as <a
+href="https://www.yelp.com/biz/mr-holmes-bakehouse-los-angeles">Mr. Holmes
+Bakehouse</a> and <a
+href="https://www.yelp.com/biz/osteria-mamma-los-angeles">Osteria
+Mamma</a>. Jeni’s Splendid Ice Creams (see below) is also down the
+street! I find myself rotating between three flavors - Sea Salt with
+Caramel Ribbons, Stumptown Coffee with Compartes Love Nuts, and Roasted
+Strawberry &amp; Toasted White Chocolate.</p>
+<p>Random anecdote: One time an employee at Salt &amp; Straw overheard
+me telling my friend that Salt &amp; Straw ice cream makes me so happy
+and she paid for my scoop <em>out of the goodness of her heart</em>.
+That experience cemented my love for Salt &amp; Straw. Bless her
+soul.</p>
+<p>Price: $4.90 for a single scoop</p>
+</div>
+<div id="jenis-splendid-ice-creams" class="section level4">
+<h4><a
+href="https://www.yelp.com/biz/jenis-splendid-ice-creams-los-angeles">Jeni’s
+Splendid Ice Creams</a></h4>
+</div>
+<div id="saffron-rose-ice-cream" class="section level4">
+<h4><a
+href="https://www.yelp.com/biz/saffron-and-rose-ice-cream-los-angeles">Saffron
+&amp; Rose Ice Cream</a></h4>
+</div>
+<div id="scoops" class="section level4">
+<h4><a
+href="https://www.yelp.com/biz/scoops-los-angeles">Scoops</a></h4>
+</div>
+<div id="mcconnells-fine-ice-creams" class="section level4">
+<h4><a
+href="https://www.yelp.com/biz/mcconnells-fine-ice-creams-los-angeles">McConnell’s
+Fine Ice Creams</a></h4>
+<p><img src="images/IMG_5899.JPG" style="width:50%"></p>
+</div>
+<div id="tea-master-matcha-cafe-green-tea-shop" class="section level4">
+<h4><a
+href="https://www.yelp.com/biz/tea-master-matcha-cafe-and-green-tea-shop-los-angeles">Tea
+Master Matcha Cafe &amp; Green Tea Shop</a></h4>
+</div>
+<div id="honeymee" class="section level4">
+<h4><a
+href="https://www.yelp.com/biz/honeymee-los-angeles-3">Honeymee</a></h4>
+<p><img src="images/IMG_5948.JPG" style="width:50%"></p>
+<p><br></p>
+</div>
+<div id="sweet-rose-creamery" class="section level4">
+<h4><a
+href="https://www.yelp.com/biz/sweet-rose-creamery-los-angeles-2">Sweet
+Rose Creamery</a></h4>
+</div>
+<div id="diddy-riese-cookies" class="section level4">
+<h4><a
+href="https://www.yelp.com/biz/diddy-riese-cookies-los-angeles-2">Diddy
+Riese Cookies</a></h4>
+</div>
+<div id="carmela-ice-cream" class="section level4">
+<h4><a
+href="https://www.yelp.com/biz/carmela-ice-cream-los-angeles-2">Carmela
+Ice Cream</a></h4>
+</div>
+<div id="matcha-cha" class="section level4">
+<h4><a
+href="https://www.yelp.com/biz/matcha-cha-los-angeles-3">Matcha-cha</a></h4>
+</div>
+<div id="creamistry" class="section level4">
+<h4><a
+href="https://www.yelp.com/biz/creamistry-los-angeles">Creamistry</a></h4>
+</div>
+<div id="owls" class="section level4">
+<h4><a href="https://www.yelp.com/biz/owls-porter-ranch">Owl’s</a></h4>
+</div>
+<div id="cafe-bora" class="section level4">
+<h4><a href="https://www.yelp.com/biz/cafe-bora-los-angeles">Cafe
+Bora</a></h4>
+<p><img src="images/IMG_5388.jpeg" style="width:50%"></p>
+<p><br></p>
+<p><strong>NOW CLOSED</strong></p>
+<p><br></p>
+<p><br></p>
+</div>
+</div>
+<div id="new-york-ny" class="section level3">
+<h3>New York, NY</h3>
+<div id="van-leeuwen-artisan-ice-cream" class="section level4">
+<h4><a
+href="https://www.yelp.com/biz/van-leeuwen-artisan-ice-cream-new-york-3">Van
+Leeuwen Artisan Ice Cream</a></h4>
+<p><img src="images/IMG_7974.JPG" style="width:50%"></p>
+<p><br></p>
+</div>
+<div id="morgensterns-finest-ice-cream" class="section level4">
+<h4><a
+href="https://www.yelp.com/biz/morgensterns-finest-ice-cream-new-york-2">Morgenstern’s
+Finest Ice Cream</a></h4>
+</div>
+<div id="milk-bar" class="section level4">
+<h4><a href="https://www.yelp.com/biz/milk-bar-midtown-new-york">Milk
+Bar</a></h4>
+<p><img src="images/IMG_5465.JPG" style="width:50%"></p>
+</div>
+<div id="the-original-chinatown-ice-cream-factory"
+class="section level4">
+<h4><a
+href="https://www.yelp.com/biz/chinatown-ice-cream-factory-new-york">The
+Original Chinatown Ice Cream Factory</a></h4>
+<p><img src="images/IMG_5439.JPG" style="width:50%"></p>
+</div>
+<div id="il-laboratorio-del-gelato" class="section level4">
+<h4><a
+href="https://www.yelp.com/biz/il-laboratorio-del-gelato-new-york">il
+laboratorio del gelato</a></h4>
+</div>
+<div id="taiyaki-nyc" class="section level4">
+<h4><a href="https://www.yelp.com/biz/taiyaki-nyc-new-york">Taiyaki
+NYC</a></h4>
+<p><br></p>
+<p><br></p>
+</div>
+</div>
+<div id="dublin-ireland" class="section level3">
+<h3>Dublin, Ireland</h3>
+<div id="murphys-ice-cream" class="section level4">
+<h4><a
+href="https://www.yelp.com/biz/murphys-ice-cream-dublin-2">Murphys Ice
+Cream</a></h4>
+<p><br></p>
+<p><br></p>
+</div>
+</div>
+<div id="venice-italy" class="section level3">
+<h3>Venice, Italy</h3>
+<div id="grom" class="section level4">
+<h4><a href="https://www.yelp.com/biz/grom-venezia">Grom</a></h4>
+<p><br></p>
+<p><br></p>
+</div>
+</div>
+<div id="florence-italy" class="section level3">
+<h3>Florence, Italy</h3>
+<div id="gelateria-la-carraia" class="section level4">
+<h4><a href="https://www.yelp.com/biz/la-carraia-firenze-2">Gelateria La
+Carraia</a></h4>
+<p><br></p>
+<p><br></p>
+</div>
+</div>
+<div id="rome-italy" class="section level3">
+<h3>Rome, Italy</h3>
+<div id="palazzo-del-freddo-giovanni-fassi" class="section level4">
+<h4><a
+href="https://www.yelp.com/biz/palazzo-del-freddo-giovanni-fassi-roma-3">Palazzo
+del Freddo Giovanni Fassi</a></h4>
+</div>
+<div id="old-bridge-gelateria" class="section level4">
+<h4><a href="https://www.yelp.com/biz/old-bridge-roma">Old Bridge
+Gelateria</a></h4>
+<p><br></p>
+<p><br></p>
+</div>
+</div>
+<div id="seoul-korea" class="section level3">
+<h3>Seoul, Korea</h3>
+<div id="oslo" class="section level4">
+<h4><a
+href="https://foursquare.com/v/oslo/5507f021498ed87197a29f1a">O’slo</a></h4>
+</div>
+<div id="foot-long-ice-cream" class="section level4">
+<h4>Foot-long Ice Cream</h4>
+<p><br></p>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
