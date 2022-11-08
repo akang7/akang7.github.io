@@ -1,0 +1,7 @@
+---
+title: "About this site"
+---
+
+<br>
+
+This is a personal website built on November 2022. This website includes my resume, personal interests, and links to my personal LinkedIn and GitHub profiles.
