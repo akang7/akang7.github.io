@@ -6,10 +6,12 @@ navbar:
     - text: "About"
       href: about.html
   right:
-    - icon: fa-ice-cream fa-lg
-      href: ice_ream.html
+    - icon: <i class="fa-light fa-ice-cream"></i>
+      href: ice_cream.html
     - icon: fa-envelope fa-lg
       href: mailto:<ashleykang0709@gmail.com>
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/ashley-kang-74571278/
     - icon: fa-github fa-lg
       href: http://github.com/akang7/
 output:
