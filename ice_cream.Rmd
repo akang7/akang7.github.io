@@ -7,9 +7,13 @@ output:
 ---
 
 <br>
-On a less serious note, I really enjoy ice cream and when I was in college, I wrote a [blog post](http://ashleykanggg.tumblr.com/post/94611347893/ice-creameries-in-the-bay) dedicated to all the "*artisanal*" ice cream I had in the Bay Area. This jumpstarted the idea to write about all the ice cream I've tried thus far. Due to age, but mostly fear of developing diabetes and gaining weight, I don't consume ice cream at the rate in which I used to (during my glory days - aka college), but I still enjoy a good ice cream from time to time.
+On a less serious note, I really enjoy ice cream and when I was in college, I wrote a [blog post](http://ashleykanggg.tumblr.com/post/94611347893/ice-creameries-in-the-bay) dedicated to all the "*artisanal*" ice cream I had in the Bay Area. This jumpstarted the idea to write about some of my favorite ice cream places I've tried thus far. Due to age--honestly, mostly fear of developing diabetes and gaining weight--I don't consume ice cream at the rate in which I used to (during my glory days - aka college), but I still enjoy a good ice cream from time to time.
 
 _Just a friendly reminder that this is all personal opinion/preference_
+
+<br>
+
+**PSA**: Due to the expansion of many of the below ice cream companies/stores, there are often multiple locations which are not comprehensively listed here. I chose the locations that I frequent the most. 
 
 <br>
 
@@ -24,15 +28,13 @@ m_bay_area <- leaflet() %>% setView(lng = -122.431297, lat = 37.773972, zoom = 1
 m_bay_area
 ```
 
-#### [Mr. and Mrs. Miscellaneous](https://www.yelp.com/biz/mr-and-mrs-miscellaneous-san-francisco)
+#### [Sunday Social, formerly known as Mr. and Mrs. Miscellaneous](https://www.yelp.com/biz/mr-and-mrs-miscellaneous-san-francisco)
 
 <img src="images/IMG_5140.JPG" style="width:50%">  
 
 One of my favorite ice creameries of all time. Putting this at the top of my list for favorite ice cream places in the Bay Area may be controversial since there are many people who adamantly believe that Bi-Rite is the *best* creamery in San Francisco, but I think what seals the deal for me is the creaminess of the ice cream at Mr. and Mrs. Miscellaneous. I love the fact that every bite is so indulgent. Brownie points for packing the ice cream all the way down the cone.
 
 Price: $3.50 for a single scoop (1 flavor)
-
-Side Note: Mr. And Mrs. Miscellaneous only lets you try two flavors. There isn’t much seating and unfortunately there is a $5 minimum in order to use a credit card.
 
 <br>
 
@@ -56,15 +58,13 @@ It took me a while to try Humphry’s - I had it junior year in college while ha
 
 Price: $4.75 for a single
 
-Con: They didn’t serve cones (at least when I visited).
-
 <br>
 
 #### [Ici Ice Cream](https://www.yelp.com/biz/ici-ice-cream-berkeley)
 
 <img src="images/IMG_5355.JPG" style="width:50%">
 
-**NOW CLOSED** 
+**NOW CLOSED** What a tragedy
 <br>
 This is a Berkeley staple. I’ve been here too many times, ranging from when they first open in the morning to barely making the cut-off right before they close. Their homemade cone is a must-try! My favorite flavor at Ici is Rose Vanilla. One thing's for sure - Ici does **not** shy away from eclectic flavors: banana curry, pink peppercorn, Anise Almond Grappa Raisin, etc. This is a little icier and less creamy/rich than the other ice cream shops listed above.
 
@@ -98,16 +98,6 @@ Price: $6.50 for a single scoop.
 
 <br>
 
-#### [CREAM](https://www.yelp.com/biz/cream-berkeley-5)
-
-CREAM stands for "Cookies Rule Everything Around Me." Berkeley equivalent of Diddy Riese in Los Angeles (see below). Famous for their ice cream cookie sandwiches. The ice cream itself isn't too special, but add the cookies (which are served warm) and you're in for a sweet treat.
-
-Price: $3.99 for an ice cream sandwich, $2.49 for a single scoop
-
-Cons: Ice cream can melt quickly since it is sandwiched between two warm cookies. Also, the lines get crazy especialy during nighttime on the weekends.
-
-<br>
-
 #### [Almare Gelato Italiano](https://www.yelp.com/biz/almare-gelato-italiano-berkeley)
 
 Small shop near the Berkeley BART entrance serving decent gelato. My go-to flavor here is Stracciatella - have yet to be disappointed. They also give you a good serving size. They also have a stamp card so take one and bring it with you if you will be frequenting this place.
@@ -120,25 +110,15 @@ Cons: Inconsistent service, limited seating.
 
 <br>
 
-#### [John's Ice Cream](https://www.yelp.com/biz/johns-ice-cream-berkeley)
+#### [Lush Gelato](https://www.yelp.com/biz/lush-gelato-berkeley)
 
-Back in the day, John's Ice cream used to be $1 flat. Then, I heard that they raised their price by $0.10 on one random day either my junior or senior year of college (my memory is a little hazy). I'm not joking when I say that adding $0.10 to the price greatly upset, dare I say outraged, people. You pay for what you get - the quality is decent, but nowhere near astonishing. It does the job. 
-
-Price: $1.75 for a single scoop
-
-Cons: Cash only
+**NOW CLOSED** (as reported on Yelp)
 
 <br>
 
-#### [Tara's Organic Ice Cream](https://www.yelp.com/biz/taras-organic-ice-cream-berkeley)
+This shop is hidden, tucked away at the back of Epicurious Garden. I prefer this place over Almare. The gelato is good quality and there's a cute outdoor space you can sit in.
 
-#### [Three Twins Ice Cream](https://www.yelp.com/biz/three-twins-ice-cream-berkeley)
-
-#### [Secret Scoop Thai Gelato](https://www.yelp.com/biz/secret-scoop-thai-gelato-and-dessert-cafe-berkeley)
-
-#### [Lush Gelato](https://www.yelp.com/biz/lush-gelato-berkeley)
-
-This shop is hidden, tucked away at the back of Epicurious Garden.
+Price: $4.50 for a single scoop
 
 <br>
 
@@ -146,51 +126,31 @@ This shop is hidden, tucked away at the back of Epicurious Garden.
 
 ### Los Angeles, CA
 
+#### [Jeni's Splendid Ice Creams](https://www.yelp.com/biz/jenis-splendid-ice-creams-los-angeles)
+
+I love Jeni's. I know Jeni's started in Columbus, Ohio BUT it's a wonderful addition to LA. There are a bunch of locations in LA now, and they also sell pints at markets like Whole Foods which is great if you can't stop by the store. My favorite flavors are the brambleberry crisp and brown butter almond. Ask to try flavors! Also if you order your ice cream in a cup, they give you a little piece of the waffle cone with your order.
+
+Price: $6.25 for a single scoop (up to 2 flavors)
+
+<br>
+
 #### [Salt & Straw Ice Cream](https://www.yelp.com/biz/salt-and-straw-los-angeles)
 
-Okay, this is cheating a little since Salt & Straw originated in Portland, but since I've never been to Portland (and therefore haven't had the *original* Salt & Straw), I will say this is one of my favorite ice cream shops in sunny Los Angeles. It's positioned in Larchmont Village next to some of my favorite shops such as [Mr. Holmes Bakehouse](https://www.yelp.com/biz/mr-holmes-bakehouse-los-angeles) and [Osteria Mamma](https://www.yelp.com/biz/osteria-mamma-los-angeles). Jeni's Splendid Ice Creams (see below) is also down the street! I find myself rotating between three flavors - Sea Salt with Caramel Ribbons, Stumptown Coffee with Compartes Love Nuts, and Roasted Strawberry & Toasted White Chocolate. 
+Okay, this is cheating a little since Salt & Straw originated in Portland, but since I've never been to Portland (and therefore haven't had the *original* Salt & Straw), I will say this is a go-to in Los Angeles. It's positioned in Larchmont Village with lots of cute stores and eateries, though there are so many stores scattered throughout LA. Jeni's Splendid Ice Creams is also down the street! I find myself rotating between three flavors - Sea Salt with Caramel Ribbons, Stumptown Coffee with Compartes Love Nuts, and Roasted Strawberry & Toasted White Chocolate. Lately, I've been feeling like Salt & Straw has been a little *too sweet* (I know - ice cream being too sweet?!?), but if you have a sweet tooth, this is the place for you!
 
 Random anecdote: One time an employee at Salt & Straw overheard me telling my friend that Salt & Straw ice cream makes me so happy and she paid for my scoop *out of the goodness of her heart*. That experience cemented my love for Salt & Straw. Bless her soul.
 
-Price: $4.90 for a single scoop
+Price: $5.95 for a single scoop
 
-#### [Jeni's Splendid Ice Creams](https://www.yelp.com/biz/jenis-splendid-ice-creams-los-angeles)
+<br>
 
 #### [Saffron & Rose Ice Cream](https://www.yelp.com/biz/saffron-and-rose-ice-cream-los-angeles)
 
-#### [Scoops](https://www.yelp.com/biz/scoops-los-angeles)
+Really solid Persian ice cream. Located in Westwood near UCLA. 
 
-#### [McConnell's Fine Ice Creams](https://www.yelp.com/biz/mcconnells-fine-ice-creams-los-angeles)
+Price: $5.50 for a small (2 scoops)
 
-<img src="images/IMG_5899.JPG" style="width:50%">
-
-#### [Tea Master Matcha Cafe & Green Tea Shop](https://www.yelp.com/biz/tea-master-matcha-cafe-and-green-tea-shop-los-angeles)
-
-#### [Honeymee](https://www.yelp.com/biz/honeymee-los-angeles-3)
-
-<img src="images/IMG_5948.JPG" style="width:50%">
-
-<br>
-
-#### [Sweet Rose Creamery](https://www.yelp.com/biz/sweet-rose-creamery-los-angeles-2)
-
-#### [Diddy Riese Cookies](https://www.yelp.com/biz/diddy-riese-cookies-los-angeles-2)
-
-#### [Carmela Ice Cream](https://www.yelp.com/biz/carmela-ice-cream-los-angeles-2)
-
-#### [Matcha-cha](https://www.yelp.com/biz/matcha-cha-los-angeles-3)
-
-#### [Creamistry](https://www.yelp.com/biz/creamistry-los-angeles)
-
-#### [Owl's](https://www.yelp.com/biz/owls-porter-ranch)
-
-#### [Cafe Bora](https://www.yelp.com/biz/cafe-bora-los-angeles)
-
-<img src="images/IMG_5388.jpeg" style="width:50%">
-
-<br>
-
-**NOW CLOSED**
+Cons: Can get pretty busy with a long line and parking can be difficult in Westwood. Saffron pistachio, rose, and jasmine are some of my go-to flavors.
 
 <br>
 
@@ -214,9 +174,13 @@ Price: $4.90 for a single scoop
 
 <img src="images/IMG_5439.JPG" style="width:50%">
 
-#### [il laboratorio del gelato](https://www.yelp.com/biz/il-laboratorio-del-gelato-new-york)
+#### [Venchi](https://www.yelp.com/biz/venchi-new-york-6)
 
-#### [Taiyaki NYC](https://www.yelp.com/biz/taiyaki-nyc-new-york)
+I honestly slept on Venchi for all 3 years while I was living in New York and I finally decided to try it on a whim while I was visiting this year (2022). What took me so long?! I will say it's pretty pricey the way I like to order it (almost $10!!!), but honestly, ice cream/gelato has seemingly become a luxury. I like getting the gourmet cone (which is an add-on).
+
+Price: $7.25 for a regular (up to 2 flavors) 
+
+Con: Have you seen the price...
 
 <br>
 
@@ -258,8 +222,10 @@ Price: $4.90 for a single scoop
 
 ### Seoul, Korea
 
-#### [O'slo](https://foursquare.com/v/oslo/5507f021498ed87197a29f1a)
+#### [Baekmidang](https://1964baekmidang.com/en/about/)
 
-#### Foot-long Ice Cream
+I love this place so much. I don't usually deviate from their soft milk ice cream, which is so milky, icy, yet pleasantly light. Something about Korean ice cream is different than ice cream in the US. They also service ice cream made with soy milk instead of regular cow's milk.
 
-<br>
+Price: ₩4,200 (~$3 USD)
+
+#### [O'slo](https://www.shinsegaefood.com/en/brand/oslo/index.html)
