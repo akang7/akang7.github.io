@@ -9,11 +9,8 @@ output:
 <br>
 On a less serious note, I really enjoy ice cream and when I was in college, I wrote a [blog post](http://ashleykanggg.tumblr.com/post/94611347893/ice-creameries-in-the-bay) dedicated to all the "*artisanal*" ice cream I had in the Bay Area. This jumpstarted the idea to write about some of my favorite ice cream places I've tried thus far. Due to age--honestly, mostly fear of developing diabetes and gaining weight--I don't consume ice cream at the rate in which I used to (during my glory days - aka college), but I still enjoy a good ice cream from time to time.
 
-_Just a friendly reminder that this is all personal opinion/preference_
-
 <br>
-
-**PSA**: Due to the expansion of many of the below ice cream companies/stores, there are often multiple locations which are not comprehensively listed here. I chose the locations that I frequent the most. 
+**PS**: Due to the expansion of many of the below ice cream companies/stores, there are often multiple locations which are not comprehensively listed here. I chose the locations that I frequent the most. 
 
 <br>
 
@@ -27,6 +24,8 @@ library(leaflet)
 m_bay_area <- leaflet() %>% setView(lng = -122.431297, lat = 37.773972, zoom = 10) %>% addProviderTiles(providers$CartoDB.Positron)
 m_bay_area
 ```
+
+<br>
 
 #### [Sunday Social, formerly known as Mr. and Mrs. Miscellaneous](https://www.yelp.com/biz/mr-and-mrs-miscellaneous-san-francisco)
 
