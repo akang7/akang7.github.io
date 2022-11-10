@@ -9,7 +9,7 @@ output:
 <br>
 On a less serious note, I really enjoy ice cream and when I was in college, I wrote a [blog post](http://ashleykanggg.tumblr.com/post/94611347893/ice-creameries-in-the-bay) dedicated to all the "*artisanal*" ice cream I had in the Bay Area. This jumpstarted the idea to write about all the ice cream I've tried thus far. Due to age, but mostly fear of developing diabetes and gaining weight, I don't consume ice cream at the rate in which I used to (during my glory days - aka college), but I still enjoy a good ice cream from time to time.
 
-*Just a friendly reminder that this is all personal opinion/preference*
+_Just a friendly reminder that this is all personal opinion/preference_
 
 <br>
 
@@ -18,6 +18,11 @@ On a less serious note, I really enjoy ice cream and when I was in college, I wr
 <br>
 
 ### Bay Area, CA
+```{r echo = FALSE}
+library(leaflet)
+m_bay_area <- leaflet() %>% setView(lng = -122.431297, lat = 37.773972, zoom = 10) %>% addProviderTiles(providers$CartoDB.Positron)
+m_bay_area
+```
 
 #### [Mr. and Mrs. Miscellaneous](https://www.yelp.com/biz/mr-and-mrs-miscellaneous-san-francisco)
 
@@ -55,13 +60,13 @@ Con: They didn’t serve cones (at least when I visited).
 
 <br>
 
-### Berkeley, CA
-
 #### [Ici Ice Cream](https://www.yelp.com/biz/ici-ice-cream-berkeley)
 
 <img src="images/IMG_5355.JPG" style="width:50%">
 
-**NOW CLOSED** This is a Berkeley staple. I’ve been here too many times, ranging from when they first open in the morning to barely making the cut-off right before they close. Their homemade cone is a must-try! My favorite flavor at Ici is Rose Vanilla. One thing's for sure - Ici does **not** shy away from eclectic flavors: banana curry, pink peppercorn, Anise Almond Grappa Raisin, etc. This is a little icier and less creamy/rich than the other ice cream shops listed above.
+**NOW CLOSED** 
+<br>
+This is a Berkeley staple. I’ve been here too many times, ranging from when they first open in the morning to barely making the cut-off right before they close. Their homemade cone is a must-try! My favorite flavor at Ici is Rose Vanilla. One thing's for sure - Ici does **not** shy away from eclectic flavors: banana curry, pink peppercorn, Anise Almond Grappa Raisin, etc. This is a little icier and less creamy/rich than the other ice cream shops listed above.
 
 Price: $3.50 (cup) or $4.75 (cone) for one scoop
 
